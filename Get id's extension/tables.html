@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kategorie - linki</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        td {
+            padding: 5px;
+        }
+
+        .link {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    </div>
+
+    <script>
+        document.addEventListener("change", () => {
+            const links = document.querySelectorAll(".link");
+
+            links.forEach((link) => {
+                link.addEventListener("click", (e) => {
+                    let dummy = document.createElement("textarea");
+                    dummy.value = e.target.innerText;
+                    document.body.appendChild(dummy);
+                    dummy.select();
+                    document.execCommand("copy");
+                    document.body.removeChild(dummy);
+                    console.log("ok");
+                });
+            });
+
+        })
+    </script>
+</body>
+
+</html>
