@@ -1,0 +1,10 @@
+{
+  "name": "Jump Around",
+  "description": "get values from all pages - builded by Krystain Kantor",
+  "version": "2.0",
+  "manifest_version": 3,
+  "permissions": ["storage", "activeTab", "scripting", "clipboardWrite"],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
